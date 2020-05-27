@@ -1,0 +1,10 @@
+applications:
+- name: hotel-webservice
+  memory: 1024M
+  buildpack: java_buildpack
+  routes:
+  - route: hotel-webservice.cfapps.io
+services:
+- spring_soap
+
+    

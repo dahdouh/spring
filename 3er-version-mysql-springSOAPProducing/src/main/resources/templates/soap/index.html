@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layout}">
+<head>
+    <title>SOAP ws </title>
+</head>
+<body>
+
+<div layout:fragment="content" class="container">
+		<div class="card-deck mb-3 text-center">
+			 
+			<div class="card mb-4 shadow-sm">
+				<div class="card-header bg-success text-white">
+					<h4 class="my-0 font-weight-normal"> Backend: SOAP webservice </h4>
+				</div>
+				<div class="card-body">
+					<h1 class="card-title pricing-card-title">
+						<small>Le développement de cette version est fondée sur le Framework Spring boot et JPA (java), MYSQL et Format XML (WSDL)</small>
+					</h1>
+				
+					<button type="button" class="btn btn-success btn-lg">
+						<a class="p-2 text-white" target="_blank" href="http://hotel-webservice-soap.cfapps.io/ws/hotel.wsdl"> Fichier WSDL </a>
+					</button>
+					<button type="button" class="btn btn-success btn-lg">
+						<a class="p-2 text-white" target="_blank" href="https://hotel-webservices-client.cfapps.io/soap/home">Application d'hotel (consommer webservice)</a>
+					</button>
+										
+				</div>
+			</div>
+			
+		</div>
+</div>
+
+</body>
+</html>

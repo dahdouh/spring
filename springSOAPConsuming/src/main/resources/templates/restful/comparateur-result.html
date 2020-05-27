@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorate="~{restful/layout}">
+<head>
+<title>Comparateur - Reservation Hotel RESTful</title>
+</head>
+<body>
+
+	<div layout:fragment="content">
+		<section class="my-5">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12">
+
+						<div class="card">
+							<div class="card-header bg-warning text-white">Resultats de comparateur: Offres des hotels</div>
+							<div class="card-body">
+								<h5 class="card-title">Critères de recherche des offres
+									d'hotel</h5>
+<!-- 								<p th:text="'login: ' + ${RequestOffres.login}" -->
+<!-- 									class="card-text" /> -->
+<!-- 								<p th:text="'password: ' + ${RequestOffres.password}" -->
+<!-- 									class="card-text" /> -->
+								<div class="alert alert-danger" role="alert">
+									<h5 th:text="'Ville: ' + ${criteresRecherche.ville}+ ', Type hotel: ' + ${criteresRecherche.nombreEtoile} + ', nombre de personnes: ' + ${criteresRecherche.nombrePersonnes}" />
+									<h5 th:text="'Date de début: ' + ${criteresRecherche.dateDebut} + ', Date de fin: ' + ${criteresRecherche.dateFin}"/>
+								</div>
+								<h2 class="card-title">Comparateur: Offres disponible</h2>
+
+								<div class="media border" style="margin-bottom:12px; padding: 10px" th:if="${OffresComparateur != null}" th:each="comparator : ${OffresComparateur}">
+										
+									<img class="align-self-center mr-3"
+										th:src="@{'https://hotel-webservices.cfapps.io/restful/get-image-with-media-type/'+ ${#strings.arraySplit(comparator.idChambre,'_')[0]}}"
+										style="width: 270px; hight: 90px;"/>
+									<div class="media-body">
+										<h4 th:text="${comparator.nomHotel}" class="h3" style="font-weight: bold"></h4>
+										<p th:text="' Adresse d\'hotel: '+${comparator.adresseHotel}" class="h4"></p>
+										<p th:text="'Nombre étoiles: '+${comparator.nombreEtoile}" class="h5"></p>
+										<p th:text="'Nombre de lits: '+${comparator.nombreLits}" class="h5"></p>
+										<p><strong th:text="'agence de voyage: '+${comparator.nomAgenceVoyage}"></strong></p>
+<!-- 										<p class="h4"> -->
+<!-- 											<span th:text="'Prix: '+ ${offre.prix}" class="badge badge-pill badge-success"></span> -->
+<!-- 										</p> -->
+									</div>
+									<a   class="align-self-center mr-3 btn badge badge-pill badge-warning" th:href="@{'/restful/reservation/'+${comparator.idChambre}}" role="button"> Reserver </a>
+								</div>
+					
+								<div th:if="${#lists.isEmpty(OffresComparateur)}"
+									class="alert alert-danger" role="alert">Oops! Désolé, il n'y a pas d'offres pour les dates selectionnées.</div>
+
+
+								<a href="/restful/comparateur" class="btn btn-warning"> Chercher d'autres offres d'hébergement</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	</div>
+
+</body>
+</html>

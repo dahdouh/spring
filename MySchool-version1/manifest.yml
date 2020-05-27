@@ -1,0 +1,10 @@
+applications:
+- name: onlineschool
+  memory: 1024M
+  buildpack: java_buildpack
+  routes:
+  - route: onlineschool.cfapps.io
+services:
+- myschool_db
+
+    

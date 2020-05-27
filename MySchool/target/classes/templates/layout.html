@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport"
+	content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title layout:title-pattern="$CONTENT_TITLE - $LAYOUT_TITLE"> Ecole en ligne Backend</title>
+
+<!-- Bootstrap CSS -->
+<link href="./css/bootstrap.css" rel="stylesheet" th:href="@{/css/bootstrap.css}" />
+</head>
+<body>
+	<div style="margin-bottom: 30px;">
+		<nav class="navbar navbar-expand-lg navbar-success bg-success text-white">
+			<a class="navbar-brand text-white" href="#">Webservice RESTful- Ecole en ligne</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse"
+				data-target="#navbarText" aria-controls="navbarText"
+				aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+		</nav>
+	</div>
+
+
+	<section layout:fragment="content"  style="font-size:1.5em">
+		<p>Default content.</p>
+	</section>
+
+	<!-- Footer -->
+	<footer class="container py-5"  style="font-size:1.5em">
+		<div class="row">
+			<div class="col-md-12">
+				<p th:text="'&copy;  '+ 2020 + ' Karim Dahdouh & Theirno Barry-Tous droits réservés' ">
+					</small>
+				</p>
+			</div>
+		</div>
+	</footer>
+
+
+	<!-- Optional Section -->
+	<th:block layout:fragment="optional" />
+
+</body>
+</html>

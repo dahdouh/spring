@@ -1,0 +1,11 @@
+
+applications:
+- name:  androidprojectonlineschool
+  path: target/serveur-0.0.1-SNAPSHOT.jar
+  memory: 1G
+services:
+- mysqldb
+
+
+
+

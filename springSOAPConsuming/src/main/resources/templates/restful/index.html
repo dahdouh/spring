@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{restful/layout}">
+<head>
+    <title>Accueil </title>
+</head>
+<body>
+
+<!-- <div layout:fragment="content"> -->
+<!--     <section class="my-5"> -->
+<!--         <div class="container"> -->
+<!--             <div class="row"> -->
+<!--                 <div class="col-md-12"> -->
+<!--                     <h1>Welcome to Our Site</h1> -->
+<!--                     <p>Lorem ipsum dolor sit amet, consectetur [....]</p> -->
+<!--                 </div> -->
+<!--             </div> -->
+<!--         </div> -->
+<!--     </section> -->
+<!-- </div> -->
+
+
+
+<div layout:fragment="content" class="container">
+		<div class="card-deck mb-3 text-center">
+			 
+			<div class="card mb-4 shadow-sm">
+				<div class="card-header bg-success text-white">
+					<h4 class="my-0 font-weight-normal">WS1: Offres diponibles</h4>
+				</div>
+				<div class="card-body">
+					<h1 class="card-title pricing-card-title">
+						<small>Agences de voyage</small>
+					</h1>
+					<ul class="list-unstyled mt-3 mb-4">
+						<li>Consulter les disponibilités des offres</li>
+					</ul>
+					<button type="button" class="btn btn-lg btn-block btn-success bg-success text-white">
+						<a class="p-2 bg-success text-white" href="/restful/offres"> Offres Hotel </a>
+					</button>
+				</div>
+			</div>
+			
+			<div class="card mb-4 shadow-sm">
+				<div class="card-header bg-success text-white">
+					<h4 class="my-0 font-weight-normal">Comparateur des offres des hotels</h4>
+				</div>
+				<div class="card-body">
+					<h1 class="card-title pricing-card-title">
+						<small>Comparer toutes les offres des agences de voyages</small>
+					</h1>
+					<ul class="list-unstyled mt-3 mb-4">
+						<li>Découvrire les prix les moins chers</li>
+					</ul>
+					<button type="button" class="btn btn-lg btn-block btn-success bg-success text-white">
+						<a class="p-2 text-white" href="/restful/comparateur"> Comparateur des offres </a>
+					</button>
+				</div>
+			</div>
+			
+			<div class="card mb-4 shadow-sm">
+				<div class="card-header bg-success text-white">
+					<h4 class="my-0 font-weight-normal">WS2: Réservation</h4>
+				</div>
+				<div class="card-body">
+					<h1 class="card-title pricing-card-title">
+						<small class="text-muted"> Effectuer une réservation </small>
+					</h1>
+					<ul class="list-unstyled mt-3 mb-4">
+						<li>Il faut d'abord chercher les offres diponibles avant d'effectuer la reservation</li>
+					</ul>
+				</div>
+			</div>
+			
+		</div>
+</div>
+
+</body>
+</html>

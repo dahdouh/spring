@@ -1,0 +1,10 @@
+applications:
+- name: schoolonline
+  memory: 1024M
+  buildpack: java_buildpack
+  routes:
+  - route: schoolonline.cfapps.io
+services:
+- spring_soap
+
+    

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layout}">
+<head>
+    <title>SOAP ws </title>
+</head>
+<body>
+
+<div layout:fragment="content" class="container">
+		<div class="card-deck mb-3 text-center">
+			 
+			<div class="card mb-4 shadow-sm">
+				<div class="card-header">
+					<h4 class="my-0 font-weight-normal">Gestion de reservation d'hotel SOAP & RESTful</h4>
+				</div>
+				<div class="card-body">
+					<h1 class="card-title pricing-card-title">
+						<small>Le développement de cette version est fondée sur le framwork Spring boot et JPA, MySQL, SOAP et RESTful</small>
+					</h1>
+					
+					
+					<button type="button" class="btn btn-success btn-lg">
+<!-- 						<a class="p-2 text-white" target="_blank" href="http://hotel-webservice-soap.cfapps.io/soap" style="font-size:2em;"> Version SOAP </a> -->
+							<a class="p-2 text-white" target="_blank" href="https://hotel-webservices-client.cfapps.io/soap/home" style="font-size:2em;"> Version SOAP </a>
+					</button>
+					<button type="button" class="btn btn-danger btn-lg">
+<!-- 						<a class="p-2 text-white" target="_blank" href="https://hotel-webservice-soap-client.cfapps.io/restful" style="font-size:2em;">Version RESTful</a> -->
+							<a class="p-2 text-white" target="_blank" href="https://hotel-webservices-client.cfapps.io/restful/home" style="font-size:2em;"> Version RESTful </a>
+					</button>
+										
+				</div>
+			</div>
+			
+		</div>
+</div>
+
+</body>
+</html>

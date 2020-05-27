@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorate="~{layout}">
+<head>
+<title>Offres d'hotel</title>
+</head>
+<body>
+
+	<div layout:fragment="content">
+		<section class="my-5">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12">
+
+						<div class="card">
+							<div class="card-header p-3 mb-2 bg-warning text-white">WS3: Comparateur des offres des hotels</div>
+							<div class="card-body">
+
+
+								<form action="#" th:action="@{/comparateur}"
+									th:object="${comparateur}" method="post">
+									<div class="form-group">
+										<label for="exampleInputEmail1"> Ville (Montpellier) </label> <input
+											type="text" th:field="*{ville}" class="form-control"
+											aria-describedby="emailHelp" placeholder="entrer une ville">
+									</div>
+									<div class="form-group">
+										<label> Date de début (05-03-2020) </label> <input
+											type="text" th:field="*{dateDebut}" class="form-control"
+											aria-describedby="Date de début"
+											placeholder="Enter date de début"> <small id="emailHelp"
+									</div>
+
+									<div class="form-group">
+										<label> Date de fin (07-03-2020) </label> <input
+											type="text" th:field="*{dateFin}" class="form-control"
+											aria-describedby="saisir date de fin" placeholder="Enter date de fin">
+									</div>
+
+									<div class="form-group">
+										<label> Nombre de personnes (1) </label> <input type="text"
+											th:field="*{nombrePersonnes}" class="form-control"
+											aria-describedby="emailHelp" placeholder="Enter nombre de personnes à hébergées">
+									</div>
+									<div class="form-group">
+										<label> Nombre d'étoiles (4) </label> <input type="text"
+											th:field="*{nombreEtoile}" class="form-control"
+											aria-describedby="nombreEtoile" placeholder="nombre d'étoiles">
+									</div>
+
+									<button type="submit" class="btn btn-danger bg-warning bg-success text-white">Chercher</button>
+								</form>
+
+							</div>
+						</div>
+
+
+
+					</div>
+				</div>
+			</div>
+		</section>
+	</div>
+
+</body>
+</html>
